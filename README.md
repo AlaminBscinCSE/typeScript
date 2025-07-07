@@ -19,6 +19,8 @@ interface User {
   name: string;
   age: number;
 }
+
+
 `Interface`supports extending other interfaces.Even not only interfaces but also Interface can extending types.It is shape very read able.I thank that every programmer understand properly this method.
 
 Example using `type`:
@@ -28,4 +30,26 @@ type User = {
 }
 
 `Type`can use intersection `(&)` to achieve similar results.There are many types able in this tools.Among them `union` type and `intersection `type very use able,Even when you need difference type text data,You can use union type But User can take one section For example `type choseOnePerson='Tmanna'|'Halima'|'Rakib'`.Intersection is not optional Such as `type Name={name:string},type Age ={age:number}`.If we need intersection that time we have to make `type Person= Name & Age`.After that Use Person type We will be bound to give two variable data `Name and Age`,due to it is intersection.
+
+# Provide an example of using union and intersection types in TypeScript below:
+---
+
+### A union type allows a variable to be one of several types.
+
+function printId(id: string | number) {
+  console.log("Your ID is:", id);
+}
+
+### An intersection type combines multiple types into oneS
+
+type Name = { name: string };
+type Age = { age: number };
+
+type Person = Name & Age;
+
+const person: Person = {
+  name: "Alamin",
+  age: 25,
+};
+
 
